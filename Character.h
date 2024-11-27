@@ -1,3 +1,6 @@
+#ifndef CHARACTER_H
+#define CHARACTER_H
+
 #include <string>
 #include <vector>
 #include "Item.h"
@@ -7,112 +10,81 @@ using namespace std;
 /**
  * Character class that represents the player
  */
-class Character 
+class Character
 {
     public:
         /**
          * Constructs a Character with default stats
          */
-        Character(string char_name) 
-        {
-            name = char_name;
-            level = 1;
-            health = 15;
-            attack = 5;
-            xp = 0;
-        }
+        Character(string char_name);
 
         /**
          * Getter function for a Character's name
          * @return the name
          */
-        string get_name()
-        {
-            return name;
-        }
+        string get_name();
 
         /**
          * Getter function for a Character's level
          * @return the level
          */
-        int get_level()
-        {
-            return level;
-        }
+        int get_level();
 
         /**
          * Setter function for a Character's level
          */
-        void set_level(int new_level)
-        {
-            level = new_level;
-        }
+        void set_level(int new_level);
 
         /**
          * Getter function for a Character's health
          * @return the health
          */
-        int get_health()
-        {
-            return health;
-        }
+        int get_health();
 
         /**
          * Setter function for a Character's health
          */
-        void set_health(int new_health)
-        {
-            health = new_health;
-        }
+        void set_health(int new_health);
+
+        /**
+         * Getter function for a Character's attack points
+         * @return attack points
+         */
+        int get_attack();
+
+        /**
+         * Setter function for a Character's attack points
+         */
+        void set_attack(int new_attack);
 
         /**
          * Getter function for a Character's xp
          * @return the xp
          */
-        int get_xp()
-        {
-            return xp;
-        }
+        int get_xp();
 
         /**
          * Setter function for a Character's xp
          */
-        void set_xp(int new_xp)
-        {
-            xp = new_xp;
-        }
+        void set_xp(int new_xp);
 
         /**
          * Getter function for Character's inventory
          * @return the inventory
          */
-        vector<Item> get_inventory()
-        {
-            return inventory;
-        }
+        vector<Item> get_inventory();
 
         /**
          * Function that adds a given Item into the Character's inventory if there is enough space
          * @return 0 on success
          * @return 1 on failure
          */
-        int add_to_inventory(Item item) 
-        {
-            if (inventory.size() >= 5)
-            {
-                return 1;
-            } 
-            inventory.push_back(item);
-            return 0;
-        }
+        int add_to_inventory(Item item);
 
         /**
          * Function that handles fighting an enemy
          */
-        void fight(Monster monster) 
-        {
-            /* TO DO */
-        }
+        void fight(Monster monster);
     private:
         string name;
         int level;
@@ -121,3 +93,5 @@ class Character
         int xp;
         vector<Item> inventory;
 };
+
+#endif
