@@ -4,7 +4,6 @@
 #include <string>
 #include <vector>
 #include "Item.h"
-#include "Monster.h"
 using namespace std;
 
 /**
@@ -84,7 +83,7 @@ class Character
         /**
          * Function that handles fighting an enemy
          */
-        void fight(Monster monster);
+        void fight();
     private:
         string name;
         int level;

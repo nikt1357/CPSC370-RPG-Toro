@@ -2,7 +2,6 @@
 #define MONSTER_H
 
 #include <string>
-#include "Character.h"
 using namespace std;
 
 /**
@@ -49,7 +48,7 @@ class Monster
         /**
          * Function that handles fighting the character
          */
-        void fight(Character character);
+        void fight();
     private:
         string type;
         int health;

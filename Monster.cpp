@@ -42,7 +42,7 @@ string Monster::generate_item_dropped()
 
 }
 
-void Monster::fight(Character character)
+void Monster::fight()
 {
 
 

@@ -1,7 +1,6 @@
 #include <string>
 #include <vector>
 #include "Item.h"
-#include "Monster.h"
 #include "Character.h"
 using namespace std;
 
@@ -74,7 +73,7 @@ int Character::add_to_inventory(Item item)
     return 0;
 }
 
-void Character::fight(Monster monster) 
+void Character::fight() 
 {
 
 
