@@ -1,5 +1,6 @@
 #include <string>
 #include <vector>
+#include "Item.h"
 #include "Monster.h"
 #include "Dungeon.h"
 using namespace std;
